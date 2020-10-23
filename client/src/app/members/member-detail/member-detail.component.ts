@@ -5,6 +5,7 @@ import { MembersService } from 'src/app/_services/members.service';
 import {NgxGalleryOptions} from '@kolkov/ngx-gallery';
 import {NgxGalleryImage} from '@kolkov/ngx-gallery';
 import {NgxGalleryAnimation} from '@kolkov/ngx-gallery';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-member-detail',

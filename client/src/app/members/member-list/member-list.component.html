@@ -3,11 +3,7 @@
 </div>
 
 <div class="container mt-3">
-  <form
-    (ngSubmit)="loadMembers()"
-    autocomplete="off"
-    class="form-inline mb-3"
-  >
+  <form (ngSubmit)="loadMembers()" autocomplete="off" class="form-inline mb-3">
     <div class="form-group">
       <label>Age from:</label>
       <input
@@ -31,30 +27,45 @@
 
     <div class="form-group px-2">
       <label>Show: </label>
-      <select [(ngModel)]="userParams.gender" class="form-control ml-1" name="gender" style="width: 130px;">
+      <select
+        [(ngModel)]="userParams.gender"
+        class="form-control ml-1"
+        name="gender"
+        style="width: 130px"
+      >
         <option *ngFor="let gender of genderList" [value]="gender.value">
-          {{gender.display}}
+          {{ gender.display }}
         </option>
       </select>
     </div>
     <button class="btn btn-primary ml-1" type="submit">Apply Filters</button>
-    <button (click)="resetFilters()" class="btn btn-info ml-1" type="submit">Reset Filters</button>
+    <button (click)="resetFilters()" class="btn btn-info ml-1" type="submit">
+      Reset Filters
+    </button>
     <div class="col">
       <div class="btn-group float-right">
-        <button (click)="loadMembers()" [(ngModel)]="userParams.orderBy" btnRadio="lastActive" class="btn btn-primary"
-                name="orderBy"
-                type="button">
+        <button
+          (click)="loadMembers()"
+          [(ngModel)]="userParams.orderBy"
+          btnRadio="lastActive"
+          class="btn btn-primary"
+          name="orderBy"
+          type="button"
+        >
           Last Active
         </button>
-        <button (click)="loadMembers()" [(ngModel)]="userParams.orderBy" btnRadio="created" class="btn btn-primary"
-                name="orderBy"
-                type="button">
+        <button
+          (click)="loadMembers()"
+          [(ngModel)]="userParams.orderBy"
+          btnRadio="created"
+          class="btn btn-primary"
+          name="orderBy"
+          type="button"
+        >
           Newest members
         </button>
-
       </div>
     </div>
-
   </form>
 </div>
 

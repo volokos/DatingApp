@@ -11,3 +11,16 @@ img.img-thumbnail {
 input[type=file] {
   color: transparent;
 }
+
+.text-image {
+  position: relative;
+  /* color: white; */
+}
+
+.centered {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  color: red;
+}
